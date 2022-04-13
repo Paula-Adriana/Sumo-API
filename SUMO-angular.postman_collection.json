@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "80659edb-436a-4012-97b8-f63799331913",
+		"name": "SUMO-angular",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get-List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rikishi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rikishi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shikona",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/rikishi/shodai",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rikishi",
+						"shodai"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Rikishi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n        \"shikona\": \"Abi\",\r\n        \"heya\": \"Shikoroyama\",\r\n        \"posRank\": \"Sekiwake\",\r\n        \"favoriteGrip\": \"Oshidashi\"\r\n    },",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rikishi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rikishi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Rikishi",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Rikishi",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "13",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/rikishi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rikishi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
