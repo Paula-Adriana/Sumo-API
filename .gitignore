@@ -104,7 +104,7 @@ dist
 .tern-port
 
 #extras
-.docx
+*.docx
 .metadata
 .project
 .classpath
