@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Alterar rikishi </h3>
+            <hr/>
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label>Id</label>
+                        <input type="number" class="form-control" id="id" [(ngModel)]="rikishi.id" name="Id">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Shikona</label>
+                        <input type="text" class="form-control" id="shikona" [(ngModel)]="rikishi.shikona" name="Shikona">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Heya</label>
+                        <input type="text" class="form-control" id="heya" [(ngModel)]="rikishi.heya" name="Heya">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rank</label>
+                        <input type="text" class="form-control" id="rank" [(ngModel)]="rikishi.posRank" name="Rank">
+                    </div>
+                    <div class="form-group">
+                        <label>Favorite Grip</label>
+                        <input type="text" class="form-control" id="grip" [(ngModel)]="rikishi.favoriteGrip" name="Favorite Grip">
+                    </div>
+                    <br/>
+                    <button class="btn btn-success" type="submit">Enviar</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

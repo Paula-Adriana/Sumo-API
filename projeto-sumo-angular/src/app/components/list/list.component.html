@@ -1,0 +1,24 @@
+<table class = "table table-striped table-bordered">
+<thead>
+  <tr>
+      <th> Id </th>
+      <th> Shikona </th>
+      <th> Heya </th>
+      <th> Rank </th>
+      <th> Favorite Grip </th>
+
+  </tr>
+</thead>
+
+<tbody> 
+<tr *ngFor="let rikishi of rikishi$ | async">
+  <td> {{rikishi.id}} </td>
+  <td> {{rikishi.shikona}} </td>
+  <td> {{rikishi.heya}} </td>
+  <td> {{rikishi.posRank}} </td>
+  <td> {{rikishi.favoriteGrip}} </td>
+
+
+</tr>
+</tbody>
+</table>
