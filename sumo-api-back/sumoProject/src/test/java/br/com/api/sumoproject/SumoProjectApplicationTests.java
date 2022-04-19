@@ -1,10 +1,10 @@
-package br.com.devs2blu.projetosumo;
+package br.com.api.sumoproject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProjetoSumoApplicationTests {
+class SumoProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
