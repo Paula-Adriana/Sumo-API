@@ -69,11 +69,11 @@ public class RikishiController {
 	}
 	
 		@PutMapping("/{id}")
-	public ResponseEntity<Object> updateRikishi(@PathVariable(value = "id") int id,
+	public ResponseEntity<Object> updateRikishi(@PathVariable("id") int id,
 			@RequestBody @Valid RikishiDto rikishiDto) {
 		Optional<RikishiModel> rikishiModelOptional = rikishiService.findById(id);
 		if (!rikishiModelOptional.isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Rikishi not found - id: " + id);
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Rikishi not found!");
 		}
 		var rikishiModel = new RikishiModel();
 		BeanUtils.copyProperties(rikishiDto, rikishiModel);

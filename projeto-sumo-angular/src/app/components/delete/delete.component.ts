@@ -10,7 +10,7 @@ import { ListService } from 'src/app/service/list.service';
 export class DeleteComponent implements OnInit {
 
  rikishi: ListModel =  new ListModel;
- id!: number;
+
 
   constructor(private listService: ListService) { }
 
@@ -18,7 +18,7 @@ export class DeleteComponent implements OnInit {
   }
 
   onSubmit() {
-    this.listService.deleteRikishi(this.id).subscribe(data => {
+    this.listService.deleteRikishi(this.rikishi.id).subscribe(data => {
       console.log(data)
     });
     

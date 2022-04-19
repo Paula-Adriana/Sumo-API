@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ListModel } from 'src/app/models/list-model';
 import { ListService } from 'src/app/service/list.service';
 
@@ -10,7 +11,7 @@ import { ListService } from 'src/app/service/list.service';
 export class UpdateComponent implements OnInit {
 
   rikishi: ListModel =  new ListModel;
-  
+
 
   constructor(private listService: ListService) { }
 
@@ -18,7 +19,7 @@ export class UpdateComponent implements OnInit {
   }
 
   onSubmit() {
-    this.listService.UpdateRikishi(this.rikishi).subscribe(data => {
+    this.listService.UpdateRikishi(this.rikishi.id).subscribe(data => {
       console.log(data);
     });
   }

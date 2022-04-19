@@ -2,7 +2,7 @@ import { ListModel } from './../models/list-model';
 import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+
 
 
 @Injectable({
@@ -25,20 +25,21 @@ AddRikishi (listModel: ListModel) {
 }
 
 //Alterando
-UpdateRikishi(listModel: ListModel) {
-  const urlUpdate = `${environment.apiBase}/rikishi`
-  return this.http.put(urlUpdate, listModel);
+UpdateRikishi(id?: number) {
+  const urlUpdate = `${environment.apiBase}/rikishi/${id}`
+  return this.http.put(urlUpdate, ListModel);
 }
 
-//Deletando - nao vai
-deleteRikishi (id: number) {
+//Deletando
+deleteRikishi (id?: number) {
   const urlDelete = `${environment.apiBase}/rikishi/${id}`
-  return this.http.delete(urlDelete + id);
+  return this.http.delete(urlDelete);
 }
 
-//consultando um - nao vai aidiconar campos que apareceram tb
-getOneRikishi (shikona: string) {
-  const urlGetOne= `${environment.apiBase}/rikishi/${shikona}`
+//consultando um rikishi po id
+getOneRikishi (id?: number) {
+  const urlGetOne= `${environment.apiBase}/rikishi/${id}`
+  console.log(urlGetOne)
   return this.http.get(urlGetOne);
 }
 
