@@ -1,7 +1,6 @@
 package br.com.api.sumoproject.models;
 
 import java.io.Serializable;
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

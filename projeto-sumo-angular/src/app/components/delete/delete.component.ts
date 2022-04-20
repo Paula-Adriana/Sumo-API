@@ -9,7 +9,8 @@ import { ListService } from 'src/app/service/list.service';
 })
 export class DeleteComponent implements OnInit {
 
- rikishi: ListModel =  new ListModel;
+ rikishi: ListModel =  new ListModel();
+ okInsert: boolean = false;
 
 
   constructor(private listService: ListService) { }

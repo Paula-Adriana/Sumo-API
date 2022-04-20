@@ -25,9 +25,9 @@ AddRikishi (listModel: ListModel) {
 }
 
 //Alterando
-UpdateRikishi(id?: number) {
-  const urlUpdate = `${environment.apiBase}/rikishi/${id}`
-  return this.http.put(urlUpdate, ListModel);
+UpdateRikishi(listModel: ListModel) {
+  const urlUpdate = `${environment.apiBase}/rikishi/${listModel.id}`
+  return this.http.put(urlUpdate, listModel);
 }
 
 //Deletando
@@ -39,7 +39,6 @@ deleteRikishi (id?: number) {
 //consultando um rikishi po id
 getOneRikishi (id?: number) {
   const urlGetOne= `${environment.apiBase}/rikishi/${id}`
-  console.log(urlGetOne)
   return this.http.get(urlGetOne);
 }
 
