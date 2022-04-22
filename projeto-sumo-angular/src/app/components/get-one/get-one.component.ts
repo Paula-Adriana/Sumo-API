@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ListModel } from 'src/app/models/list-model';
 import { ListService } from 'src/app/service/list.service';
 
@@ -8,7 +9,8 @@ import { ListService } from 'src/app/service/list.service';
   styleUrls: ['./get-one.component.scss'],
 })
 export class GetOneComponent implements OnInit {
-  rikishi: ListModel = new ListModel;
+  rikishi: ListModel = new ListModel();
+  showData: boolean = false;
 
   constructor(private listService: ListService) {}
 
@@ -17,6 +19,8 @@ export class GetOneComponent implements OnInit {
   onSubmit() {
     this.listService.getOneRikishi(this.rikishi.id).subscribe((data) => {
       console.log(data);
+      this.showData = !this.showData; //toggle
+      this.rikishi = data;
     });
   }
 }

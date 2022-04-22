@@ -1,20 +1,31 @@
 <div class="row">
-    <div class="card col-md-6 offset-md-3 offset-md-3">
-        <div class="row">
-            <h3 class="text-center"> Find a rikishi </h3>
-            <hr/>
-            <div class="card-body">
-                <form (ngSubmit)="onSubmit()">
-
-                  <div class="form-group">
-                        <label>Id</label>
-                        <input type="text" class="form-control" id="id" [(ngModel)]="rikishi.id" name="id">
-                    </div>
-                    <br/>
-                    <button class="btn btn-success" type="submit">Enviar</button>
-
-                </form>
-            </div>
-        </div>
+  <div class="card col-md-6 offset-md-3 offset-md-3">
+    <div class="row">
+      <h3 class="text-center">Find a rikishi</h3>
+      <hr />
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>Id</label>
+            <input
+              type="text"
+              class="form-control"
+              id="id"
+              [(ngModel)]="rikishi.id"
+              name="id"
+            />
+          </div>
+          <br />
+          <button class="btn btn-success" type="submit">Enviar</button>
+      </form>
+      </div>
     </div>
-</div>
+  </div>
+  
+  <div *ngIf="showData">
+         <p> Id: {{ rikishi.id }}</p>
+         <p> Shikona: {{ rikishi.shikona }}</p>
+         <p> Heya: {{ rikishi.heya }}</p>
+         <p> Ranking: {{ rikishi.posRank }}</p>
+         <p> Favorite Grip: {{ rikishi.favoriteGrip }}</p>
+    </div>
