@@ -1,40 +1,64 @@
 <div *ngIf="okInsert" class="row">
-    <div class="alert alert-success" role="alert">
-      Rikishi  <b> {{ rikishi.shikona }} </b> Inserido com sucesso!
+  <div class="alert alert-success" role="alert">
+    Rikishi <b> {{ rikishi.shikona }} </b> Inserido com sucesso!
+  </div>
+</div>
+
+<div class="row">
+  <div class="card col-md-4 col-sm-12 offset-md-4">
+    <div class="row">
+      <h3 class="text-center">Add a new rikishi</h3>
+      <hr/>
+      <div class="card-body">
+        <form class="col-lg-12" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>Shikona</label>
+            <input
+              type="text"
+              class="form-control"
+              id="shikona"
+              [(ngModel)]="rikishi.shikona"
+              name="Shikona"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Heya</label>
+            <input
+              type="text"
+              class="form-control"
+              id="heya"
+              [(ngModel)]="rikishi.heya"
+              name="Heya"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Rank</label>
+            <input
+              type="text"
+              class="form-control"
+              id="rank"
+              [(ngModel)]="rikishi.posRank"
+              name="Rank"
+            />
+          </div>
+          <div class="form-group">
+            <label>Favorite Grip</label>
+            <input
+              type="text"
+              class="form-control"
+              id="grip"
+              [(ngModel)]="rikishi.favoriteGrip"
+              name="Favorite Grip"
+            />
+          </div>
+          <div class="d-flex mt-3">
+            <button class="btn btn-outline-success me-auto" routerLink="/home">Voltar</button>
+            <button class="btn btn-success" type="submit">Salvar</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-  
-<div class="row">
-    <div class="card col-md-6 offset-md-3 offset-md-3">
-        <div class="row">
-            <h3 class="text-center"> Adicionar rikishi </h3>
-            <hr/>
-            <div class="card-body">
-                <form (ngSubmit)="onSubmit()">
-
-                    <div class="form-group">
-                        <label>Shikona</label>
-                        <input type="text" class="form-control" id="shikona" [(ngModel)]="rikishi.shikona" name="Shikona">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Heya</label>
-                        <input type="text" class="form-control" id="heya" [(ngModel)]="rikishi.heya" name="Heya">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Rank</label>
-                        <input type="text" class="form-control" id="rank" [(ngModel)]="rikishi.posRank" name="Rank">
-                    </div>
-                    <div class="form-group">
-                        <label>Favorite Grip</label>
-                        <input type="text" class="form-control" id="grip" [(ngModel)]="rikishi.favoriteGrip" name="Favorite Grip">
-                    </div>
-                    <br/>
-                    <button class="btn btn-success" type="submit">Enviar</button>
-
-                </form>
-            </div>
-        </div>
-    </div>
 </div>
