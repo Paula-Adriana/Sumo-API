@@ -13,7 +13,7 @@ export class DeleteComponent implements OnInit {
  okInsert: boolean = false;
 
 
-  constructor(private listService: ListService) { }
+  constructor(private listService: ListService) {}
 
   ngOnInit(): void {
   }

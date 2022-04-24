@@ -6,6 +6,7 @@ import { ListComponent } from './components/list/list.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GetOneComponent } from './components/get-one/get-one.component';
+import { DetailsComponent } from './components/details/details.component';
 
 const routes: Routes = [
   {path: 'List', component: ListComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'Delete', component: DeleteComponent},
   {path: 'Update', component: UpdateComponent},
   {path: 'Create', component: CreateComponent},
-  {path: 'Pesquisar', component: GetOneComponent},
+  {path: 'FindRikishi', component: GetOneComponent},
+  {path: 'Details/:id', component: DetailsComponent},
   {path: '', redirectTo: '/home', pathMatch:'full'}
 
 ];

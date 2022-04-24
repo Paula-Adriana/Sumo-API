@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { GetOneComponent } from './components/get-one/get-one.component';
+import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { GetOneComponent } from './components/get-one/get-one.component';
     UpdateComponent,
     HomeComponent,
     GetOneComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -13,7 +13,7 @@
 <tbody> 
 <tr *ngFor="let rikishi of rikishi$ | async">
   <td> {{rikishi.id}} </td>
-  <td> {{rikishi.shikona}} </td>
+  <td> <a href="./Details/{{rikishi.id}}"> {{rikishi.shikona}} </a></td>
   <td> {{rikishi.heya}} </td>
   <td> {{rikishi.posRank}} </td>
   <td> {{rikishi.favoriteGrip}} </td>
