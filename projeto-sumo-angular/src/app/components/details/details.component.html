@@ -1,8 +1,18 @@
 
-<div>
-    <p> Id: {{ rikishi.id }}</p>
-    <p> Shikona: {{ rikishi.shikona }}</p>
-    <p> Heya: {{ rikishi.heya }}</p>
-    <p> Ranking: {{ rikishi.posRank }}</p>
-    <p> Favorite Grip: {{ rikishi.favoriteGrip }}</p>
+<div class="card col-lg-4 offset-4 detalhe-rikishi">
+  <div class="card-body">
+    <h5 class="card-title">{{ rikishi.shikona }}</h5>
+    <hr>
+    <p> <strong>Id:</strong> {{ rikishi.id }}</p>
+    <p> <strong>Shikona:</strong> {{ rikishi.shikona }}</p>
+    <p> <strong>Heya:</strong> {{ rikishi.heya }}</p>
+    <p> <strong>Ranking:</strong> {{ rikishi.posRank }}</p>
+    <p> <strong>Favorite Grip:</strong> {{ rikishi.favoriteGrip }}</p>
+
+    <div class="d-flex mt-3">
+        <button class="btn btn-outline-success me-auto" routerLink="/home">Voltar</button>
+        <button class="btn btn-success me-3" routerLink="/Update">Edit</button>
+        <button (click)="delRikishi()" class="btn btn-danger" type="submit">Delete</button>
+      </div>
+  </div>
 </div>

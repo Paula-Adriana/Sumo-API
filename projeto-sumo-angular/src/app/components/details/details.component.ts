@@ -28,5 +28,13 @@ export class DetailsComponent implements OnInit {
    
   }
   
-
+  delRikishi() {
+    this.routeSub = this.route.params.subscribe(params => {
+      this.listService.deleteRikishi(params['id']).subscribe(data => {
+      console.log(data)
+    });
+    })
+    
+    
+  }
 }
