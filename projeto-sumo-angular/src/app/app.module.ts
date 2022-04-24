@@ -6,9 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ListComponent } from './components/list/list.component';
 import { CreateComponent } from './components/create/create.component';
-import { DeleteComponent } from './components/delete/delete.component';
 import { UpdateComponent } from './components/update/update.component';
-import { HomeComponent } from './components/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -21,9 +19,7 @@ import { DetailsComponent } from './components/details/details.component';
     HeaderComponent,
     ListComponent,
     CreateComponent,
-    DeleteComponent,
     UpdateComponent,
-    HomeComponent,
     GetOneComponent,
     DetailsComponent,
   ],
