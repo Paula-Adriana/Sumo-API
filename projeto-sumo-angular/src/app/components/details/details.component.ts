@@ -7,34 +7,32 @@ import { ListService } from 'src/app/service/list.service';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+  styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent implements OnInit {
-
   rikishi: ListModel = new ListModel();
-  private routeSub: Subscription = new Subscription;
+  private routeSub: Subscription = new Subscription();
 
-  
-  constructor(private listService: ListService, private route: ActivatedRoute) { }
+
+  constructor(
+    private listService: ListService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-
-    this.routeSub = this.route.params.subscribe(params => {
+    //details
+    this.routeSub = this.route.params.subscribe((params) => {
       this.listService.getOneRikishi(params['id']).subscribe((data) => {
         this.rikishi = data;
       });
     });
-    
-   
   }
-  
+
   delRikishi() {
-    this.routeSub = this.route.params.subscribe(params => {
-      this.listService.deleteRikishi(params['id']).subscribe(data => {
-      console.log(data)
+    this.routeSub = this.route.params.subscribe((params) => {
+      this.listService.deleteRikishi(params['id']).subscribe((data) => {
+        console.log(data);
+      });
     });
-    })
-    
-    
   }
 }

@@ -1,4 +1,5 @@
 export class ListModel {
+
   id?: number;
   shikona?: string;
   heya?: string;

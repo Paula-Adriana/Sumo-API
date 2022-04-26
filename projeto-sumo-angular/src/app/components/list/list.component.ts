@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ListModel } from 'src/app/models/list-model';
 
@@ -20,19 +19,10 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.ListRikishi();
-    
   }
 
   ListRikishi() {
     this.rikishi$ = this.listService.getListRikishi();
   }
 
-  onSubmit() {
-    this.listService.getOneRikishi(this.rikishi.id).subscribe((data) => {
-      console.log(data);
-      this.rikishi = data;
-    });
-  }
-  }
-  
-
+}

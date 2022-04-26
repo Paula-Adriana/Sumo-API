@@ -22,7 +22,6 @@ export class CreateComponent implements OnInit {
 
   saveRikishi() {
     this.listService.AddRikishi(this.rikishi).subscribe((rikishi) => {
-      console.log(rikishi);
       if (!(this.rikishi.shikona == 'undefined')) {
         this.okInsert = true;
 
