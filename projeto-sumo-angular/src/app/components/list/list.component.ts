@@ -12,7 +12,7 @@ import { ListService } from './../../service/list.service';
 export class ListComponent implements OnInit {
 
   rikishi$ = new Observable<ListModel[]>();
-  rikishi: ListModel = new ListModel();
+  rikishi: ListModel = new ListModel({});
 
 
   constructor(private listService: ListService) {}

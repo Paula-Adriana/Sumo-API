@@ -10,7 +10,7 @@ import { ListService } from 'src/app/service/list.service';
 })
 export class UpdateComponent implements OnInit {
 
-  rikishi: ListModel =  new ListModel();
+  rikishi: ListModel =  new ListModel({});
   id !: number;
   okInsert: boolean = false;
 
@@ -28,7 +28,7 @@ export class UpdateComponent implements OnInit {
 
         setTimeout(() => {
           this.okInsert = false;
-          this.rikishi = new ListModel();
+          this.rikishi = new ListModel({});
         }, 3000);
       }
     });

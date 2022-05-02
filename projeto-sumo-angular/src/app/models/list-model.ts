@@ -5,4 +5,8 @@ export class ListModel {
   heya?: string;
   posRank?: string;
   favoriteGrip?: string;
+
+  constructor(obj: Partial<ListModel>) {
+    Object.assign(this, obj);
+  }
 }

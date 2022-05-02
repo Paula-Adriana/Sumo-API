@@ -12,7 +12,17 @@
     <div class="d-flex mt-3">
         <button class="btn btn-outline-success me-auto" routerLink="/home">Back</button>
         <button class="btn btn-success me-3" routerLink="/Update">Edit</button>
-        <button (click)="delRikishi()" class="btn btn-danger" type="submit">Delete</button>
+        <!-- <button (click)="deleteConfirm(rikishi)" class="btn btn-danger"
+        data-toggle="modal" data-target="#modalDeleteRikishi">Delete</button> -->
+        <button class="btn btn-danger"
+        data-toggle="modal" data-target="#modalDeleteRikishi">Delete</button>
       </div>
   </div>
+</div>
+
+<div id="modal-delete-container">
+  <app-modal-delete
+    [statusDelete]="monitoraStatusDelete$"
+    [rikishiDel]="rikishiDel"
+   ></app-modal-delete>
 </div>

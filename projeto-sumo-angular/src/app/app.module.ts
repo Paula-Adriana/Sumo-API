@@ -13,6 +13,7 @@ import { GetOneComponent } from './components/get-one/get-one.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ListComponent } from './components/list/list.component';
 import { UpdateComponent } from './components/update/update.component';
+import { ModalDeleteComponent } from './components/details/modal-delete/modal-delete.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { UpdateComponent } from './components/update/update.component';
     UpdateComponent,
     GetOneComponent,
     DetailsComponent,
+    ModalDeleteComponent,
   ],
   imports: [
     BrowserModule,

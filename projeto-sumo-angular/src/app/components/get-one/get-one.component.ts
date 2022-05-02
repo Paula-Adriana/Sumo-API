@@ -9,7 +9,7 @@ import { ListService } from 'src/app/service/list.service';
   styleUrls: ['./get-one.component.scss'],
 })
 export class GetOneComponent implements OnInit {
-  rikishi: ListModel = new ListModel();
+  rikishi: ListModel = new ListModel({});
   showData: boolean = false;
   id !: number;
 

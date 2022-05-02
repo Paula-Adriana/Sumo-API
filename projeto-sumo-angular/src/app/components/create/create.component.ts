@@ -8,7 +8,7 @@ import { ListService } from 'src/app/service/list.service';
   styleUrls: ['./create.component.scss'],
 })
 export class CreateComponent implements OnInit {
-  rikishi: ListModel = new ListModel();
+  rikishi: ListModel = new ListModel({});
   okInsert: boolean = false;
 
   constructor(private listService: ListService) {}
@@ -27,7 +27,7 @@ export class CreateComponent implements OnInit {
 
         setTimeout(() => {
           this.okInsert = false;
-          this.rikishi = new ListModel();
+          this.rikishi = new ListModel({});
         }, 3000);
       }
     });
